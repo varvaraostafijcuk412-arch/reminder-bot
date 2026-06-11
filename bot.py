@@ -26,7 +26,7 @@ from telegram.ext import (
 
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN", "")
-DB_FILE = "/app/data/reminders.db"
+DB_FILE = "reminders.db"
 
 # ─────────────────────────── Логирование ────────────────────────────
 
@@ -161,7 +161,7 @@ def schedule_reminder(app: Application, user_id: int, reminder_id: int, time_str
 
     scheduler.add_job(
         send_reminder,
-        trigger=CronTrigger(hour=hour, minute=minute),
+        trigger=CronTrigger(hour=hour, minute=minute, timezone="Asia/Yakutsk"),
         args=[app, user_id, text, reminder_id],
         id=job_id,
         replace_existing=True,
