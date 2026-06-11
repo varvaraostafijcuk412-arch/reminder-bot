@@ -26,7 +26,7 @@ from telegram.ext import (
 
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN", "")
-DB_FILE = "reminders.db"
+DB_FILE = "/app/data/reminders.db"
 
 # ─────────────────────────── Логирование ────────────────────────────
 
