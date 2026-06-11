@@ -130,7 +130,7 @@ def db_get_reminder_by_id(reminder_id: int) -> sqlite3.Row | None:
 
 # ─────────────────────────── Планировщик ────────────────────────────
 
-scheduler = AsyncIOScheduler(timezone="Europe/Moscow")
+scheduler = AsyncIOScheduler(timezone="Asia/Yakutsk")
 
 
 def make_job_id(user_id: int, reminder_id: int) -> str:
